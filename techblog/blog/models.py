@@ -13,6 +13,7 @@ class Post(models.Model):
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250,
         unique_for_date='publish')
+
     author = models.ForeignKey(User,
         related_name='blog_posts')
     body = models.TextField()
@@ -30,3 +31,18 @@ class Meta:
 
     def __str__(self):
         return self.title
+
+
+class PublishedManager(models.Manager):
+    def get_queryset(self):
+        return super(PublishedManager,
+            self).get_queryset()\
+                .filter(status='published')
+
+
+class Post(models.Model):
+    # ...
+    objects = models.Manager() # The default manager.
+    published = PublishedManager() # Our custom manager.
+
+

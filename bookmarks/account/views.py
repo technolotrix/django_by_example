@@ -13,6 +13,12 @@ def dashboard(request):
             {'section': 'dashboard'})
 
 @login_required
+def images(request):
+    return render(request,
+        'account/images.html',
+            {'section': 'images'})
+
+@login_required
 def edit(request):
     if request.method == 'POST':
         user_form = UserEditForm(instance=request.user,

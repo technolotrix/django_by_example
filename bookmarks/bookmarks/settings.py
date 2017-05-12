@@ -30,6 +30,7 @@ SECRET_KEY = secrets.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+THUMBNAIL_DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -37,6 +38,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
     'account',
+    'images',
+    'sorl.thumbnail',
     'social.apps.django_app.default',
     'django.contrib.admin',
     'django.contrib.auth',

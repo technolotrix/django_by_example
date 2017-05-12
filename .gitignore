@@ -89,3 +89,7 @@ dev/
 
 # bash alias
 .bash_alias
+
+# Mac
+.DS_Store
+

@@ -38,6 +38,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = (
     'account',
     'images',
+    'sorl.thumbnail',
     'social.apps.django_app.default',
     'django.contrib.admin',
     'django.contrib.auth',

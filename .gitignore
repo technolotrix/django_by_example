@@ -95,3 +95,6 @@ dev/
 
 # Secrets
 secrets.py
+
+# Images
+bookmarks/media/

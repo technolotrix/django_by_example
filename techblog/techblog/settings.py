@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Sitemap
+
+SITE_ID = 1
 
 # Application definition
 
@@ -38,6 +41,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'blog',
     'taggit',
     'markdown',
@@ -106,6 +111,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Email configurations
+
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = secrets.EMAIL_HOST_USER
 EMAIL_HOST_PASSWORD = secrets.EMAIL_HOST_PASSWORD

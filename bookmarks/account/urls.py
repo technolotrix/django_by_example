@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 from . import views
 
 urlpatterns = [
@@ -16,6 +16,7 @@ urlpatterns = [
         'django.contrib.auth.views.logout_then_login',
         name='logout_then_login'),
     url(r'^$', views.dashboard, name='dashboard'),
+    url(r'^images/', include('images.urls'), name='images'),
     # change password urls
     url(r'^password-change/$',
         'django.contrib.auth.views.password_change',

@@ -3,8 +3,7 @@ from . import views
 
 urlpatterns = [
     url(r'^edit/$', views.edit, name='edit'),
-    # previous login view
-    # url(r'^login/$', views.user_login, name='login'),
+    url(r'^$', views.dashboard, name='dashboard'),
     # login / logout urls
     url(r'^login/$',
         'django.contrib.auth.views.login',

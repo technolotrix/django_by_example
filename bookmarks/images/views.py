@@ -20,7 +20,6 @@ def image_detail(request, id, slug):
         'image': image})
 
 @login_required
-@require_POST
 def image_create(request):
     if request.method == 'POST':
         # form is sent
@@ -36,7 +35,6 @@ def image_create(request):
             messages.success(request, 'Image added successfully')
 
             # redirect to new created item detail view
-            print(new_item.get_absolute_url())
             return redirect(new_item.get_absolute_url())
     else:
         # build form with data provided by the bookmarklet via GET

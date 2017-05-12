@@ -2,9 +2,9 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+    url(r'^edit/$', views.edit, name='edit'),
     # previous login view
     # url(r'^login/$', views.user_login, name='login'),
-
     # login / logout urls
     url(r'^login/$',
         'django.contrib.auth.views.login',
@@ -36,4 +36,5 @@ urlpatterns = [
     url(r'^password-reset/complete/$',
         'django.contrib.auth.views.password_reset_complete',
         name='password_reset_complete'),
+    url(r'^register/$', views.register, name='register'),
 ]

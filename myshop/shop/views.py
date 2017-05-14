@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 from cart.forms import CartAddProductForm
-from cart.views import cart_detail
 
 def product_detail(request, id, slug):
     product = get_object_or_404(Product,
@@ -17,9 +16,6 @@ def product_detail(request, id, slug):
 
 def product_list(request, category_slug=None):
     category = None
-    if category_slug == 'cart':
-        return cart_detail(request)
-
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
 

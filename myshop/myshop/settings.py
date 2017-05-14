@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'paypal.standard.ipn',
     'payment',
     'orders',
+    'coupons',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

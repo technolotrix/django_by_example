@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = (
     'shop',
     'cart',
+    'paypal.standard.ipn',
+    'payment',
     'orders',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -111,4 +113,8 @@ STATIC_URL = '/static/'
 # Email
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# django-paypal settings
+PAYPAL_RECEIVER_EMAIL = secrets.PAYPAL_RECEIVER_EMAIL
+PAYPAL_TEST = True
 

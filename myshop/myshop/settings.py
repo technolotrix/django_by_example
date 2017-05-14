@@ -117,5 +117,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # django-paypal settings
 PAYPAL_RECEIVER_EMAIL = secrets.PAYPAL_RECEIVER_EMAIL
+PAYPAL_BUYER_EMAIL = secrets.PAYPAL_BUYER_EMAIL
 PAYPAL_TEST = True
 

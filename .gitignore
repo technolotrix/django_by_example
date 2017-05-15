@@ -81,6 +81,7 @@ celerybeat-schedule
 # virtualenv
 dev/
 newdev/
+eduenv/
 
 # Spyder project settings
 .spyderproject

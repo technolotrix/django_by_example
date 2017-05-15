@@ -1,0 +1,26 @@
+[
+{
+  "pk": 1,
+  "model": "courses.subject",
+  "fields": {
+    "title": "Mathematics",
+    "slug": "mathematics"
+  }
+},
+{
+  "pk": 2,
+  "model": "courses.subject",
+  "fields": {
+    "title": "Music",
+    "slug": "music"
+  }
+},
+{
+  "pk": 3,
+  "model": "courses.subject",
+  "fields": {
+    "title": "Software QA",
+    "slug": "software-qa"
+  }
+}
+]
